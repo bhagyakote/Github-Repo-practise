@@ -1,0 +1,16 @@
+name: 01-Building-blocks.yaml
+on: push 
+jobs:
+   echo-hello:
+         runs-on: self-hosted
+         steps:
+            - name: saying hello
+              run: echo "hello  world"
+    echo- goodbye:
+          runs-on: self-hosted
+            - name: failed steps
+              run: |
+                echo "I will fail"
+                exit: 1
+            - name: saying ggod bye
+              run: "Saying ggod bye"
