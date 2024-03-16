@@ -7,8 +7,16 @@ jobs:
      2.EXecute automated tests
    steps:
       - name: checkout repositories
-        run: actions/checkout@v4
-      - name: priniting folders
-        run: ls
+        uses: actions/checkout@v4
+      # - name: priniting folders
+      #   run: ls
+      - name: setup node
+        uses: actions/setup-node@v3
+        with: 
+         node-version: '20.x'
+      - name: Install dependencies
+        run: npm ci
+      
+       
 
 
