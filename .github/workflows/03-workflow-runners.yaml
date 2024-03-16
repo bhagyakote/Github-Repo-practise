@@ -7,15 +7,7 @@ jobs:
             steps:
              - name: show runners
                run: echo "I am running "$RUNNER_OS" runner"
-   name: 03-workflow-runner
-on: 
-  push:
-jobs:
-   Linux-runner: 
-            runs-on: self-hosted
-            steps:
-             - name: show runners
-               run: echo "I am running "$RUNNER_OS" runner"
+
    windows-runner:
             runs-on: windows-latest
             steps:
