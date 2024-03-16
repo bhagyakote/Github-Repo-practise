@@ -2,8 +2,8 @@ name: 04- using-actions
 on: push
 jobs:
  build:
-   runs-on: ubuntu-latest
-     1.INstall the dpendencies
+   runs-on: self-hosted
+     1.Install the dpendencies
      2.EXecute automated tests
    steps:
       - name: checkout repositories
