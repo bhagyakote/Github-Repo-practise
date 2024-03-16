@@ -6,9 +6,10 @@ jobs:
          steps:
             - name: saying hello
               run: echo "hello  world"
-    echo- goodbye:
+   echo-goodbye:
           runs-on: self-hosted
-            - name: failed steps
+          steps:
+            - name: failing 
               run: |
                 echo "I will fail"
                 exit: 1
