@@ -9,9 +9,9 @@ jobs:
    echo-goodbye:
           runs-on: self-hosted
           steps:
-            - name: failing 
+            - name: Achieved success
               run: |
-                echo "I will fail"
-                exit: 1
-            - name: saying ggod bye
-              run: "Saying ggod bye"
+                echo "I will succeeed "
+                exit: 0
+            - name: saying good bye
+              run: "Saying good bye"
