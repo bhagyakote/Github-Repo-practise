@@ -12,6 +12,6 @@ jobs:
             - name: Achieved success
               run: |
                 echo "I will succeeed "
-                exit: 0
+                exit 0
             - name: saying good bye
               run: "Saying good bye"
