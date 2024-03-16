@@ -5,3 +5,8 @@ jobs:
    runs-on: latest
      1.INstall the dpendencies
      2.EXecute automated tests
+   steps:
+      - name: checkout repositories
+        run: actions/checkout@v4
+      - name: priniting folders
+        run: ls
