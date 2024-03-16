@@ -2,10 +2,19 @@ name: 03-workflow-runner
 on: 
   push:
 jobs:
-   workflow-runner: 
+   Linux-runner: 
             runs-on: self-hosted
             steps:
              - name: show runners
                run: echo "I am running "$RUNNER_OS" runner"
+   windows-runner:
+            runs-on: windows-latets
+            steps:
+              - name: show OS
+                run: echo "I am running on "$RUNNER_OS" runner"
+                
+                 
+  
+    
             
        
