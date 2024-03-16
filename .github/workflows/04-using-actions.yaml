@@ -1,0 +1,7 @@
+name: 04- using-actions
+on: push
+jobs:
+ build:
+   runs-on: latest
+     1.INstall the dpendencies
+     2.EXecute automated tests
