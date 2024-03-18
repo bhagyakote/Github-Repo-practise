@@ -1,0 +1,13 @@
+name: 02-workflow-events
+on: 
+ push:
+
+
+
+
+jobs:
+   echo:
+      runs-on: self-hosted
+      steps:
+          - name: show the trigger
+            run: echo "I am trigerred by an ${{github.event_name}}"
