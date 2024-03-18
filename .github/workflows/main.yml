@@ -7,7 +7,7 @@ on:
 
 jobs:
    echo:
-      runs-on: self-hosted
+      runs-on: ubuntu-latest
       steps:
           - name: show the trigger
             run: echo "I am trigerred by an ${{github.event_name}}"
