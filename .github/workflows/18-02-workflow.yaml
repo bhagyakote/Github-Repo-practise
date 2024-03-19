@@ -8,7 +8,7 @@ jobs:
     with: 
       target-directory: /dummmy-dir
   prints-outputs: 
-     runs-on: self-hosted
+     runs-on: ubuntu-latest
      needs: deploy
      steps: 
       - name: print outputs
