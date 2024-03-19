@@ -1,0 +1,17 @@
+name: 18.2-Reusbale-workflow
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  deploy: 
+    uses: ./.github/workflows/18-1-reusable-workflows.yaml
+    with: 
+      target-directory: /dummmy-dir
+  prints-outputs: 
+     runs-on: self-hosted
+     needs: deploy
+     steps: 
+      - name: print outputs
+        run: |
+          echo "Build status: ${{needs.deploy.outputs.build-status}}"
+          echo "URL: ${{needs.deploy.outputs.url}}"
