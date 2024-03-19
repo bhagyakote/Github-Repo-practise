@@ -19,7 +19,7 @@ on:
 
 jobs:
    deploy:
-      runs-on: self-hosted
+      runs-on: ubuntu-latest
       outputs: 
           build-status: ${{steps.build.outputs.build-status}}
           url: ${{steps.deploy.outputs.outputs.url}}
