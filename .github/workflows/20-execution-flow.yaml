@@ -1,7 +1,7 @@
 name: 10 Controlling the execution flow
 on: 
   push:
-  # workflow_dispatch:
+  workflow_dispatch:
     inputs:
       pass-unit-tests:
        type: boolean
@@ -11,7 +11,7 @@ on:
 jobs:
 
   lint-build:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       steps:
        - name: lint and build
          run: |
@@ -19,7 +19,7 @@ jobs:
               
           
   unit-tests:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       continue-on-error: true
       steps:
       - name: Running unit tests
@@ -28,7 +28,7 @@ jobs:
         if: ${{!inputs.pass-unit-tests}}
         run: exit 1 
   deploy-nonprod:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       needs:
           - lint-build
       
@@ -37,14 +37,14 @@ jobs:
       - name: Deploying to non prod
         run: echo "Deploying to non prod"
   e2e-tests:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       needs:
             []
       steps:
        - name: running E2-E tests
          run: echo "Running e2e tests"
   deploy-prod:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       needs:  []
       steps: 
        - name: Running load tests
